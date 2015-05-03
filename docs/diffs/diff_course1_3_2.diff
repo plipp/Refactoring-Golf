@@ -1,0 +1,301 @@
+diff -U 3 -H -d -r -N -- 3. Second Hole/.project 2. First Hole/.project
+--- 3. Second Hole/.project	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/.project	2012-06-08 00:19:30.000000000 +0200
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <projectDescription>
+-	<name>3. Second Hole</name>
++	<name>2. First Hole</name>
+ 	<comment></comment>
+ 	<projects>
+ 	</projects>
+diff -U 3 -H -d -r -N -- 3. Second Hole/2. First Hole.iml 2. First Hole/2. First Hole.iml
+--- 3. Second Hole/2. First Hole.iml	1970-01-01 01:00:00.000000000 +0100
++++ 2. First Hole/2. First Hole.iml	2012-10-06 13:57:27.855273891 +0200
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="false">
++    <output url="file://$MODULE_DIR$/bin" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
++    </content>
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
++    <orderEntry type="module-library">
++      <library name="junit4">
++        <CLASSES>
++          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++  </component>
++</module>
++
+diff -U 3 -H -d -r -N -- 3. Second Hole/3. Second Hole.iml 2. First Hole/3. Second Hole.iml
+--- 3. Second Hole/3. Second Hole.iml	2012-10-06 13:57:27.859273891 +0200
++++ 2. First Hole/3. Second Hole.iml	1970-01-01 01:00:00.000000000 +0100
+@@ -1,23 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+-    <output url="file://$MODULE_DIR$/bin" />
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
+-    </content>
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+-    <orderEntry type="module-library">
+-      <library name="junit4">
+-        <CLASSES>
+-          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
+-        </CLASSES>
+-        <JAVADOC />
+-        <SOURCES />
+-      </library>
+-    </orderEntry>
+-  </component>
+-</module>
+-
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/main/refactoringgolf/store/ClassDiagram.ucls 2. First Hole/src/main/refactoringgolf/store/ClassDiagram.ucls
+--- 3. Second Hole/src/main/refactoringgolf/store/ClassDiagram.ucls	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/main/refactoringgolf/store/ClassDiagram.ucls	2012-06-08 00:19:30.000000000 +0200
+@@ -1,29 +1,13 @@
+ <class-diagram version="1.0.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+   associations="true" dependencies="false" nesting-relationships="true">  
+-  <class id="1" corner="BOTTOM_RIGHT" language="java" name="refactoringgolf.store.Order" project="3. Second Hole" 
+-    file="/3. Second Hole/src/main/refactoringgolf/store/Order.java" binary="false">    
+-    <position x="94" y="196" width="-1" height="-1"/>    
+-    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+-      <attributes public="true" package="true" protected="true" private="true"/>      
+-      <operations public="true" package="true" protected="true" private="true"/>    
+-    </display>  
+-  </class>  
+-  <class id="2" corner="BOTTOM_RIGHT" language="java" name="refactoringgolf.store.OrderItem" project="3. Second Hole" 
+-    file="/3. Second Hole/src/main/refactoringgolf/store/OrderItem.java" binary="false">    
+-    <position x="412" y="194" width="-1" height="-1"/>    
++  <class id="1" corner="BOTTOM_RIGHT" language="java" name="refactoringgolf.store.Order" project="2. First Hole" 
++    file="/2. First Hole/src/main/refactoringgolf/store/Order.java" binary="false">    
++    <position x="40" y="10" width="272" height="355"/>    
+     <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+       <attributes public="true" package="true" protected="true" private="true"/>      
+       <operations public="true" package="true" protected="true" private="true"/>    
+     </display>  
+   </class>  
+-  <association>    
+-    <end type="SOURCE" nodeId="1" navigable="false">      
+-      <attribute name="items"/>      
+-      <multiplicity minimum="0" maximum="2147483647"/>    
+-    </end>    
+-    <end type="TARGET" nodeId="2" navigable="true"/>    
+-    <display labels="true" multiplicity="true"/>  
+-  </association>  
+   <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+     <attributes public="true" package="true" protected="true" private="true"/>    
+     <operations public="true" package="true" protected="true" private="true"/>  
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/main/refactoringgolf/store/Order.java 2. First Hole/src/main/refactoringgolf/store/Order.java
+--- 3. Second Hole/src/main/refactoringgolf/store/Order.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/main/refactoringgolf/store/Order.java	2012-10-06 14:23:09.823309075 +0200
+@@ -60,10 +60,6 @@
+ 		return totalItems + tax + shipping;
+ 	}
+ 
+-	private float tax(float totalAmount) {
+-		return totalAmount * 5 / 100;
+-	}
+-
+ 	private int shipping() {
+ 		int shipping = 15;
+ 		if (this.deliveryCountry == "USA") {
+@@ -71,11 +67,36 @@
+ 		}
+ 		return shipping;
+ 	}
++	
++	private float tax(float totalAmount) {
++		return totalAmount * 5 / 100;
++	}
+ 
+ 	private float totalItems() {
+ 		float totalAmount = 0;
+ 		for (OrderItem item : items) {
+-			totalAmount += item.total();
++            // BEGIN 2. CHANGE
++            // call functions on orderItem
++			float discount=0;
++			float itemAmount = item.getProduct().getUnitPrice() * item.getQuantity();
++			if (item.getProduct().getCategory() == ProductCategory.Accessories) {
++				discount = 0;
++				if (itemAmount >= 100) {
++					discount = itemAmount * 10 / 100;
++				}
++			}
++			if (item.getProduct().getCategory() == ProductCategory.Bikes) {
++				discount = itemAmount * 20 / 100;
++			}
++			if (item.getProduct().getCategory() == ProductCategory.Cloathing) {
++				discount = 0;
++				if (item.getQuantity() > 2) {
++					discount = item.getProduct().getUnitPrice();
++				}
++			}
++			itemAmount = itemAmount - discount;
++			totalAmount += itemAmount;
++            // END 2. CHANGE
+ 		}
+ 		return totalAmount;
+ 	}
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/main/refactoringgolf/store/OrderItem.java 2. First Hole/src/main/refactoringgolf/store/OrderItem.java
+--- 3. Second Hole/src/main/refactoringgolf/store/OrderItem.java	2012-10-06 14:28:46.767316763 +0200
++++ 2. First Hole/src/main/refactoringgolf/store/OrderItem.java	2012-10-06 14:13:29.267295828 +0200
+@@ -1,7 +1,7 @@
+ package refactoringgolf.store;
+ 
+ public class OrderItem {
+-
++	
+ 	public Product product;
+ 	public int quantity;
+ 
+@@ -12,7 +12,7 @@
+ 		this.product = product;
+ 		this.quantity = quantity;
+ 	}
+-
++	
+ 	public Product getProduct() {
+ 		return product;
+ 	}
+@@ -20,46 +20,4 @@
+ 	public int getQuantity() {
+ 		return quantity;
+ 	}
+-
+-	public float total() {
+-// BEGIN 3. CHANGE
+-// use categoryDiscount (and its implementations)
+-		float discount = 0;
+-		if (getProduct().getCategory() == ProductCategory.Accessories) {
+-			discount = calculateAccessoriesDiscount();
+-		}
+-		if (getProduct().getCategory() == ProductCategory.Bikes) {
+-			discount = calculateBikesDiscount();
+-		}
+-		if (getProduct().getCategory() == ProductCategory.Cloathing) {
+-			discount = calculateCloathingDiscount();
+-		}
+-		return unitPricePerQuantity() - discount;
+-	}
+-
+-	private float calculateAccessoriesDiscount() {
+-		float discount = 0;
+-		float unitPricePerQuantity = unitPricePerQuantity();
+-		if (unitPricePerQuantity >= 100) {
+-			discount = unitPricePerQuantity * 10 / 100;
+-		}
+-		return discount;
+-	}
+-
+-	private float calculateBikesDiscount() {
+-		return unitPricePerQuantity() * 20 / 100;
+-	}
+-
+-	private float calculateCloathingDiscount() {
+-		float discount = 0;
+-		if (getQuantity() > 2) {
+-			discount = getProduct().getUnitPrice();
+-		}
+-		return discount;
+-	}
+-// END 3. CHANGE
+-
+-	private float unitPricePerQuantity() {
+-		return getProduct().getUnitPrice() * getQuantity();
+-	}
+ }
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/main/refactoringgolf/store/Salesman.java 2. First Hole/src/main/refactoringgolf/store/Salesman.java
+--- 3. Second Hole/src/main/refactoringgolf/store/Salesman.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/main/refactoringgolf/store/Salesman.java	2012-10-06 14:13:29.235295827 +0200
+@@ -10,7 +10,7 @@
+ 		this.commissionPorcentage = commissionPorcentage;
+ 	}
+ 
+-	public void setCommisionPorcentage(int commissionPorcentage) {
++	public void setCommissionPorcentage(int commissionPorcentage) {
+ 		this.commissionPorcentage = commissionPorcentage;
+ 	}
+ 
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/test/refactoringgolf/store/CustomerTest.java 2. First Hole/src/test/refactoringgolf/store/CustomerTest.java
+--- 3. Second Hole/src/test/refactoringgolf/store/CustomerTest.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/test/refactoringgolf/store/CustomerTest.java	2012-10-06 14:13:29.243295828 +0200
+@@ -4,8 +4,6 @@
+ 
+ import org.junit.Test;
+ 
+-import refactoringgolf.store.Customer;
+-
+ 
+ public class CustomerTest {
+ 	@Test
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/test/refactoringgolf/store/ManagerTest.java 2. First Hole/src/test/refactoringgolf/store/ManagerTest.java
+--- 3. Second Hole/src/test/refactoringgolf/store/ManagerTest.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/test/refactoringgolf/store/ManagerTest.java	2012-10-06 14:13:29.279295828 +0200
+@@ -4,9 +4,6 @@
+ 
+ import org.junit.Test;
+ 
+-import refactoringgolf.store.Manager;
+-import refactoringgolf.store.Salesman;
+-
+ public class ManagerTest {
+ 
+ 	@Test
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/test/refactoringgolf/store/OrderTest.java 2. First Hole/src/test/refactoringgolf/store/OrderTest.java
+--- 3. Second Hole/src/test/refactoringgolf/store/OrderTest.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/test/refactoringgolf/store/OrderTest.java	2012-10-06 14:13:29.279295828 +0200
+@@ -6,13 +6,6 @@
+ 
+ import org.junit.Test;
+ 
+-import refactoringgolf.store.Customer;
+-import refactoringgolf.store.Order;
+-import refactoringgolf.store.OrderItem;
+-import refactoringgolf.store.Product;
+-import refactoringgolf.store.ProductCategory;
+-import refactoringgolf.store.Salesman;
+-
+ public class OrderTest {
+ 
+ 	@Test
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/test/refactoringgolf/store/ProductTest.java 2. First Hole/src/test/refactoringgolf/store/ProductTest.java
+--- 3. Second Hole/src/test/refactoringgolf/store/ProductTest.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/test/refactoringgolf/store/ProductTest.java	2012-10-06 14:13:29.291295829 +0200
+@@ -4,10 +4,6 @@
+ 
+ import org.junit.Test;
+ 
+-import refactoringgolf.store.ImageInfo;
+-import refactoringgolf.store.Product;
+-import refactoringgolf.store.ProductCategory;
+-
+ public class ProductTest {
+ 
+ 	@Test
+diff -U 3 -H -d -r -N -- 3. Second Hole/src/test/refactoringgolf/store/SalesmanTest.java 2. First Hole/src/test/refactoringgolf/store/SalesmanTest.java
+--- 3. Second Hole/src/test/refactoringgolf/store/SalesmanTest.java	2012-06-08 00:19:30.000000000 +0200
++++ 2. First Hole/src/test/refactoringgolf/store/SalesmanTest.java	2012-10-06 14:13:29.231295827 +0200
+@@ -4,8 +4,6 @@
+ 
+ import org.junit.Test;
+ 
+-import refactoringgolf.store.Salesman;
+-
+ public class SalesmanTest {
+ 
+ 	@Test
