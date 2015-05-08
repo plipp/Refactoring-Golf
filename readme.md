@@ -25,12 +25,13 @@ For each refactoring the following (minus-)scores have to be summed up:
 
 - 1+1 Cut&Paste
 - 1 Shortcut for Refactoring-Method
+- 2 for Action
 - 0 Formatting
 
 **Minus Points**
 
-- 2 edit a word manually
-- 2 if code doesn't compile after a refactoring
+- 3 edit a word manually
+- 3 if code doesn't compile after a refactoring
 
 The team with the minimum (minus-)score wins at the end.
 
